@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #required for Heroku
-  config.action_mailer.default_url_options = { host: => 'stevie-madnotes' }
+  config.action_mailer.default_url_options = { host: => 'stevie-madnotes.herokuapp.com' }
 end
