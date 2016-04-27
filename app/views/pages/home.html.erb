@@ -1,5 +1,15 @@
 <div class="jumbotron">
 <h1>Welcome to a dope app.</h1>
-<p>Sign up here. <%=link_to "Sign Up", "#", class:"btn btn-primary" %></p>
+
+<% if user_signed_in? %>
+# do something
+<% else %>
+	<p>Sign up here. 
+		<%=link_to "Sign Up", new_user_registration_path, class:"btn btn-primary" %>
+		<%=link_to "Login", new_user_registration_path, class:"btn btn-primary" %>
+
+	</p>
+<% end  %>
+
 <%= link_to "About", about_path %>
 </div>
